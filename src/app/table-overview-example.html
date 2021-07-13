@@ -3,13 +3,6 @@
 <mat-form-field appearance="standard">
   <mat-label>Search Vehicles</mat-label>
   <input matInput (keyup)="applyFilter($event)" [formControl]='myControl' placeholder="Search vehicles" #searchInput>
-
-  <!-- Filtering logic approach 2 -->
-  <!-- <input matInput placeholder="Search vehicles" (keyup)="filterSubject.next($event.target.value)"> 
-  
-  "
--->
-
 </mat-form-field>
 
 <div class="mat-elevation-z8">
