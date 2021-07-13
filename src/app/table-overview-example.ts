@@ -2,15 +2,10 @@ import {HttpClient} from '@angular/common/http';
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
-import {fromEvent, merge, Observable, of as observableOf, of} from 'rxjs';
-import {catchError, debounceTime, distinctUntilChanged, filter, map, startWith, switchMap, tap} from 'rxjs/operators';
+import {merge, Observable, of as observableOf} from 'rxjs';
+import {catchError, debounceTime, distinctUntilChanged, map, startWith, switchMap} from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 
-import { ApiService } from './api.service';
-
-/**
- * @title Data table with sorting, pagination, and filtering.
- */
 @Component({
   selector: 'table-overview-example',
   styleUrls: ['table-overview-example.css'],
@@ -81,7 +76,6 @@ export class TableOverviewExample implements AfterViewInit {
       })
     ).subscribe(); 
   }
-    
 
 applyFilter(event: Event) {
     if (typeof (event.target) == "undefined"){
@@ -90,8 +84,6 @@ applyFilter(event: Event) {
     this.inputValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
   }
 }
-
-
 
 export interface StarWarsApi {
   results: Vehicle[];
