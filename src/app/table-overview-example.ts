@@ -33,7 +33,6 @@ export class TableOverviewExample implements AfterViewInit {
     if(this.inputValue==undefined || this.searchInput.nativeElement==undefined) {
       this.inputValue='';
       this.searchInput.nativeElement='';
-      this.isLoadingResults = false;
     }
 
     this.httpDataSource = new StarWarsHttpDatabase(this._httpClient); 
@@ -106,7 +105,6 @@ export class StarWarsHttpDatabase {
   }
  
 }
-
 
 /**  Copyright 2021 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
