@@ -15,13 +15,10 @@ export class TableOverviewExample implements AfterViewInit {
   displayedColumns: string[] = ['name', 'cost_in_credits', 'length'];
   httpDataSource: StarWarsHttpDatabase | null;
   data: Vehicle[] = [];
-  public inputValue: string;
+  inputValue: string;
   resultsLength = 0;
   isLoadingResults = false;
-  isRateLimitReached = false;
-  filter: string;
   myControl = new FormControl();
-
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
